@@ -10,6 +10,7 @@ import qqb.uz.springreactlogin.service.EmployeService;
 
 
 @RestController
+@CrossOrigin(origins="*")
 @RequestMapping("/api/v1/employee")
 public class EmployeeController {
 
@@ -32,5 +33,4 @@ public class EmployeeController {
         LoginResponse loginResponse = employeService.loginEmployee(loginDTO);
         return ResponseEntity.ok(loginResponse);
     }
-
 }
